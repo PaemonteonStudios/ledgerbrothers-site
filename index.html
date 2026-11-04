@@ -240,6 +240,22 @@ footer .fine{flex-basis:100%;font-size:.82rem;margin-top:6px}
 .about .story p+p{margin-top:14px}
 .about .story p{font-size:1.06rem}
 @media (max-width:820px){.about{grid-template-columns:1fr}}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:26px}
+.way{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.way .tag{align-self:flex-start;font:700 .72rem/1 var(--body);letter-spacing:.14em;text-transform:uppercase;background:var(--teal-soft);color:var(--teal);padding:8px 12px;border-radius:999px}
+.way h3{font-size:1.4rem;margin-top:14px}
+.way .big{font:850 2rem/1.1 var(--display);margin-top:8px}
+.way .big small{font:600 .9rem var(--body);color:var(--muted);margin-left:6px}
+.way ul{margin:16px 0 20px;padding-left:20px;color:var(--muted);flex:1}
+.way li{margin:6px 0}
+.way .row{display:flex;gap:10px;flex-wrap:wrap}
+.cmp{width:100%;border-collapse:collapse;margin-top:22px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.cmp th,.cmp td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+.cmp thead th{background:var(--surface-2);font-family:var(--display)}
+.cmp tbody th{background:var(--surface-2);font-weight:700;width:30%}
+.cmp tr:last-child th,.cmp tr:last-child td{border-bottom:0}
+@media (max-width:820px){.two{grid-template-columns:1fr}.cmp{display:block;overflow-x:auto}}
 </style>
 </head>
 <body class="no-js">
@@ -369,23 +385,54 @@ footer .fine{flex-basis:100%;font-size:.82rem;margin-top:6px}
   </section>
 
   <!-- CLOUD -->
-  <section id="cloud" aria-labelledby="cloud-title">
-    <div class="wrap cloud">
-      <div class="rv">
-        <span class="soon">New</span>
-        <h2 id="cloud-title" style="margin-top:14px">Ledger Brothers Cloud: the same ledger on every device</h2>
-        <p class="muted" style="margin-top:14px;font-size:1.06rem">Need the same stock list on your phone, tablet and computer? Ledger Brothers Cloud is an optional online version for $9.99 per month. It is a separate product. The downloadable ledgers stay exactly as they are: one file, works offline, no account, and your data stays on your device.</p>
+  <section id="cloud" aria-labelledby="two-title">
+    <div class="wrap">
+      <p class="eyebrow">Two ways to use Ledger Brothers</p>
+      <h2 id="two-title" style="margin-top:10px">You choose how it runs</h2>
+      <p class="muted" style="margin-top:12px;max-width:60ch">Download a ledger and own it, or sign in to Cloud and use the same ledger on every device. They are separate products.</p>
+      <div class="two">
+        <article class="way">
+          <span class="tag">Download, pay once</span>
+          <h3>Offline Ledgers</h3>
+          <p class="big">From $49.99 <small>one-time</small></p>
+          <ul>
+            <li>One file built for your type of business</li>
+            <li>Works offline in your browser</li>
+            <li>Your data stays on your device</li>
+            <li>No monthly fees</li>
+            <li>Backup and restore built in</li>
+            <li>CSV import and export</li>
+            <li>Pro edition adds multiple locations and stock transfers</li>
+          </ul>
+          <div class="row"><a class="btn btn-primary" href="#pricing">See the ledgers and prices</a></div>
+        </article>
+        <article class="way">
+          <span class="tag">Subscription</span>
+          <h3>Ledger Brothers Cloud</h3>
+          <p class="big">$9.99 <small>per month</small></p>
+          <ul>
+            <li>Sign in and see the same counts on your phone, tablet and computer</li>
+            <li>Your ledger is stored online, so a lost device does not lose your data</li>
+            <li>Cancel any time</li>
+            <li>Refund within 7 days of your first payment</li>
+            <li>Your data is stored with our hosting provider in the United States. See the <a href="https://cloud.ledgerbrothers.com/privacy.html" target="_blank" rel="noopener">Cloud privacy policy</a>.</li>
+          </ul>
+          <div class="row"><a class="btn btn-primary" href="https://ledgerbrothers.gumroad.com/l/cloud" target="_blank" rel="noopener">Get Cloud, $9.99/month</a><a class="btn btn-ghost" href="/cloud">Learn more</a><a class="btn btn-ghost" href="https://cloud.ledgerbrothers.com" target="_blank" rel="noopener">Sign in</a></div>
+        </article>
       </div>
-      <div class="cloud-card rv">
-        <h3>What Cloud includes</h3>
-        <ul>
-          <li>Sign in and see the same counts on your phone, tablet and computer</li>
-          <li>Your ledger stored online, so a lost device does not lose your data</li>
-          <li>Cancel any time. Refund within 7 days of your first payment.</li>
-        </ul>
-        <p class="muted" style="margin-top:12px;font-size:.92rem">Unlike the downloadable ledgers, Cloud stores your data with our hosting provider (United States). Details are in the <a href="https://cloud.ledgerbrothers.com/privacy.html" target="_blank" rel="noopener">Cloud privacy policy</a> and <a href="https://cloud.ledgerbrothers.com/terms.html" target="_blank" rel="noopener">terms</a>.</p>
-        <p style="margin-top:14px"><a class="btn" href="https://ledgerbrothers.gumroad.com/l/cloud" target="_blank" rel="noopener">Get Cloud, $9.99/month</a> <a class="btn btn-ghost" href="/cloud">Learn more</a> <a class="btn btn-ghost" href="https://cloud.ledgerbrothers.com" target="_blank" rel="noopener">Sign in</a></p>
-      </div>
+
+      <h2 style="margin-top:56px;font-size:clamp(1.4rem,3vw,1.9rem)">Which one is right for you?</h2>
+      <table class="cmp">
+        <thead><tr><th></th><th>Offline Ledgers</th><th>Cloud</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Price</th><td>One-time purchase</td><td>$9.99 per month</td></tr>
+          <tr><th scope="row">Where your data lives</th><td>On your own device</td><td>Online, with our hosting provider</td></tr>
+          <tr><th scope="row">Works offline</th><td>Yes</td><td>Needs an internet connection</td></tr>
+          <tr><th scope="row">Same ledger on several devices</th><td>Move it with backup and restore</td><td>Yes, after you sign in</td></tr>
+          <tr><th scope="row">Account needed</th><td>No</td><td>Yes</td></tr>
+        </tbody>
+      </table>
+      <p class="muted" style="margin-top:14px">Not sure? Try the <a href="#demo">free live demo</a> first. It needs no sign-up.</p>
     </div>
   </section>
 
