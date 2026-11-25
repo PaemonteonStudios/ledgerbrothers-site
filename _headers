@@ -1,0 +1,9 @@
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-ag9qbMSyUhKwD4+FGo3ZmKa0igGfPYeMgbT3LvzLXgU='; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://public-files.gumroad.com; font-src 'self'; connect-src 'self'; frame-src https://demo.ledgerbrothers.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Cross-Origin-Opener-Policy: same-origin
+  ! Access-Control-Allow-Origin
